@@ -11,7 +11,7 @@ const exerciseSchema = new monggose.Schema({
         required: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     userId: {
@@ -24,3 +24,5 @@ const exerciseSchema = new monggose.Schema({
     collection: 'Exercise',
     versionKey: false
 });
+
+module.exports = monggose.model('Exercise', exerciseSchema);
